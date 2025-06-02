@@ -1,0 +1,68 @@
+.feather {
+  position: absolute;
+  top: -100px;
+  animation: fall 4s ease-in forwards;
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95); /* soft in and out */
+  will-change: transform;
+
+}
+
+.feather.landed {
+  animation: none;
+  transform: none !important;
+  bottom: 0;
+  top: auto;
+}
+
+.feather-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feather-name {
+  position: absolute;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  text-shadow: 0 0 3px black;
+  width: 70px;
+  pointer-events: none;
+}
+
+/* @keyframes fall {
+  0% {
+    transform: translateY(-150px) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(calc(100vh - 100px)) rotate(var(--rotate));
+    opacity: 1;
+  }
+} */
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -150px) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-20px, 30vh) rotate(-10deg);
+  }
+  60% {
+    transform: translate(20px, 60vh) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 100vh) rotate(var(--rotate));
+    opacity: 1;
+  }
+}
+
+/* @keyframes flutter {
+  0% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+} */
