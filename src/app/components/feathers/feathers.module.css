@@ -26,33 +26,42 @@
 }
 
 .name {
-  color: white;
-  font-size: 8px;
+ 
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   margin-top: -4px;
 }
 
-.risingIcon {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: riseUp 4s ease-out forwards;
-  z-index: 10;
+.loadMoreButton {
+  margin: 2rem auto;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
 }
 
-@keyframes riseUp {
+.risingIcon {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: rise 3s ease-out forwards;
+}
+
+@keyframes rise {
   0% {
-    transform: translate(-50%, 0);
+    bottom: 40px;
     opacity: 0;
   }
-  30% {
+  100% {
+    bottom: 80vh;
     opacity: 1;
   }
-  100% {
-    transform: translate(-50%, -500px);
-    opacity: 0.8;
-  }
 }
+
 
